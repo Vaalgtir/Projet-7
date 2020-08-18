@@ -1,0 +1,24 @@
+nav {
+    background-color: #757575;
+    color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0 3rem;
+  }
+  nav img {
+    max-height: 7vh;
+  }
+  nav a {
+      text-decoration: none;
+      color: whitesmoke;
+  }
+  nav span {
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 200ms;
+  }
+  nav span:hover {
+    color: #FFAB91;
+  }

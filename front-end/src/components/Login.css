@@ -1,0 +1,34 @@
+.Login {
+    text-align: center;
+  }
+  .Login .logo {
+    max-width: 20rem;
+  }
+  .Login form {
+    background-color: #FBE9E7;
+    display: flex;
+    flex-direction: column;
+    margin: 0 40%;
+    border: solid 0.2rem #FFCCBC;
+    border-radius: 1rem;
+    padding: 3rem 2rem;
+  }
+  .Login form span {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .Login form .wrapperInput {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 2rem;
+  }
+  .Login form .wrapperInput label {
+    margin-bottom: 0.3rem;
+  }
+  .Login form .wrapperInput input {
+    padding: 0.2rem 0.3rem;
+  }
+  .Login form > input {
+    margin: 0 30%;
+  }

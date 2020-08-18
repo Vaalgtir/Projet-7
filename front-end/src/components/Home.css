@@ -1,0 +1,27 @@
+main {
+    margin: 0 25%;
+    padding: 2vh 2rem;
+    background-color: #FBE9E7;
+  }
+  main form {
+    font-size: 1.2rem;
+    display: grid;
+    grid-template: 1fr;
+  }
+  main form textarea {
+    resize: none;
+    border-radius: 0.5rem;
+  }
+  main form div {
+    text-align: right;
+    margin-top: 1vh;
+  }
+  main .article {
+    margin: 2vh 0;
+  }
+  main .article span {
+    font-size: 1.2rem;
+  }
+  main .article div {
+    margin: 2vh 0 4vh 0;
+  }
