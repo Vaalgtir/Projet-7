@@ -16,12 +16,3 @@ main {
     text-align: right;
     margin-top: 1vh;
   }
-  main .article {
-    margin: 2vh 0;
-  }
-  main .article span {
-    font-size: 1.2rem;
-  }
-  main .article div {
-    margin: 2vh 0 4vh 0;
-  }
