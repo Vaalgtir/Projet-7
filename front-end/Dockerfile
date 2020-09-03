@@ -1,20 +1,17 @@
 # pull official base image
-FROM node:13.12.0-alpine
+FROM node:12 as react-build
 
 # set working directory
-WORKDIR /front-end
+WORKDIR /src/app
 
-# add `/app/node_modules/.bin` to $PATH
-ENV PATH /front-end/node_modules/.bin:$PATH
+COPY /package*.json ./
 
-# install app dependencies
-COPY package.json ./
-COPY package-lock.json ./
 RUN npm install
-RUN npm install react-scripts@3.4.1 -g
 
-# add app
-COPY . ./
+COPY . . 
 
-# start app
-CMD ["npm", "start"]
+ENV PORT=3000
+
+EXPOSE 3000
+
+CMD [ "npm", "start" ]

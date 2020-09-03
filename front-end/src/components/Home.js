@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import jwt from 'jsonwebtoken'
+import jwt from 'jsonwebtoken';
 
 import './Home.css'
 
@@ -16,10 +16,11 @@ export default function Home() {
     const history = useHistory();
 
     const token = localStorage.getItem('TOKEN');
-    const tokenDecoded = jwt.verify(token, 'LTWNHGKXTJSSRMPGDEWVUUXGP');
-    const privilege = tokenDecoded.role;
+    const tokenDecoded = jwt.verify(token, 'LTWNHGKXTJSSRMPGDEWVUUXGP')
     const userId = tokenDecoded.userId;
     const username = tokenDecoded.username;
+    const role = tokenDecoded.role;
+    const isAuth = tokenDecoded.isAuthentified;
 
     useEffect(() => {
         onLoad()
@@ -65,7 +66,7 @@ export default function Home() {
             })
     }
 
-    if (localStorage.getItem('TOKEN')) {
+    if (isAuth) {
         return (
             <main>
                 <form
@@ -92,7 +93,9 @@ export default function Home() {
                     (articles.map((article) => (
                         <Article
                             key={article.articleID}
+                            role={role}
                             articleId= {article.articleID}
+                            userId= {article.userID}
                             username= {article.username}
                             date= {article.created_at}
                             onClick= {handleDelete}

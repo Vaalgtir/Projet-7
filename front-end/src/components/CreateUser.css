@@ -1,0 +1,26 @@
+html, body, #root, .wrapperPage  {
+    height: 100%;
+}
+.wrapperPage form {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-around;
+    text-align: center;
+    margin: 5% 30%;
+}
+.wrapperPage form input{
+    margin: 0.5rem;
+    padding: 0.3rem;
+    text-align: center;
+    font-size: 1.1rem;
+}
+.wrapperPage form select{
+    margin: 1.5rem 0;
+    padding: 0.5rem 0;
+}
+.wrapperPage form textarea{
+    resize: vertical;
+}
+.wrapperPage form .submitButton{
+    margin: 1rem 5rem;
+}

@@ -1,0 +1,9 @@
+.wrapperPage .wrapperTicket {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 20%;
+}
+
+.wrapperPage {
+    text-align: center;
+}

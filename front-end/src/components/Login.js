@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import { useAppContext } from "../libs/contextLib";
 import { useHistory } from 'react-router-dom';
+import jwt from 'jsonwebtoken';
 
 import './Login.css'
 
@@ -9,11 +9,10 @@ import logo from './../img/icon-above-font.svg';
 
 
 export default function Login() {
-    const [userId, setUserId] = useState("")
-    const [pwd, setPwd] = useState("")
+    const [userId, setUserId] = useState("Admin")
+    const [pwd, setPwd] = useState("khunou")
     const [warningFeedback, setWarning] = useState()
 
-    const { userHasAuthenticated } = useAppContext();
     const history = useHistory();
 
     function handleSubmit(event) {
@@ -24,7 +23,6 @@ export default function Login() {
             password: pwd
         })
             .then(res => {
-                userHasAuthenticated(true);
                 localStorage.setItem('TOKEN', res.data.accessToken)
                 history.push("/home")
             })

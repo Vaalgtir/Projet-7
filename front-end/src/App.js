@@ -1,27 +1,34 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
-import { AppContext } from "./libs/contextLib";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import Login from './components/Login'
 import Nav from './components/Nav'
 import Home from './components/Home'
+import UserPage from './components/UserPage'
+import CreateUser from './components/CreateUser'
 
-function App() {
-  const [isAuthenticated, userHasAuthenticated] = useState(false);
+export default function App() {
 
   return (
-    <AppContext.Provider value={{ isAuthenticated, userHasAuthenticated }}>
-      <Router>
+    <Router>
+      <Switch>
         <Route path="/" exact component={Login} />
-        <Route path="/home">
-          <Nav />
+        <Route path="/home" exact>
+          <Nav
+            page='home'
+          />
           <Home />
         </Route>
-      </Router>
-    </AppContext.Provider>
+        <Route path="/creationUser/">
+          <Nav
+            page='user'
+          />
+          <CreateUser />
+        </Route>
+      </Switch>
+        <Route path="/user/:id" component={Nav}/>
+        <Route path="/user/:id" component={UserPage}/>
+    </Router>
   );
 }
-
-
-export default App;

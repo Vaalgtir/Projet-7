@@ -1,0 +1,12 @@
+.wrapperUser {
+    padding: 2rem 5rem;
+    border: solid black 1px;
+}
+.wrapperButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.wrapperButton div {
+    text-align: center;
+}
