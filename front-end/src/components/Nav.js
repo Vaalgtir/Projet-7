@@ -11,7 +11,7 @@ export default function Nav({ page }) {
     const token = localStorage.getItem('TOKEN');
     const tokenDecoded = jwt.verify(token, 'LTWNHGKXTJSSRMPGDEWVUUXGP')
     const userId = tokenDecoded.userId;
-    const role = tokenDecoded.privilege;
+    const role = tokenDecoded.role;
 
     const history = useHistory()
 
