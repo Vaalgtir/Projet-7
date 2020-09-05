@@ -1,10 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import { useHistory } from 'react-router-dom';
+import React, { useState } from 'react'
 import jwt from 'jsonwebtoken';
 
 import './User.css'
-
-import axios from 'axios'
 
 export default function User({ selectedUserId, username, role, email, bio, errorMessage, handleSubmit, submitDelete }) {
     const [newMail, setNewMail] = useState(email)
@@ -12,7 +9,6 @@ export default function User({ selectedUserId, username, role, email, bio, error
     const [verifWord, setVerifWord] = useState("")
     const [modifying, setModifying] = useState(false)
     const [deleting, setDeleting] = useState(false)
-    const history = useHistory();
     
     const token = localStorage.getItem('TOKEN');
     const tokenDecoded = jwt.verify(token, 'LTWNHGKXTJSSRMPGDEWVUUXGP')

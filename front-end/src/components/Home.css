@@ -1,4 +1,5 @@
-main {
+@media screen and (min-width:1200px) {
+  main {
     margin: 0 25%;
     padding: 2vh 2rem;
     background-color: #FBE9E7;
@@ -16,3 +17,24 @@ main {
     text-align: right;
     margin-top: 1vh;
   }
+}
+@media screen and (max-width:1200px) {
+  main {
+    margin: 0 5%;
+    padding: 2vh 1rem;
+    background-color: #FBE9E7;
+  }
+  main form {
+    font-size: 1.2rem;
+    display: grid;
+    grid-template: 1fr;
+  }
+  main form textarea {
+    resize: none;
+    border-radius: 0.5rem;
+  }
+  main form div {
+    text-align: right;
+    margin-top: 1vh;
+  }
+}

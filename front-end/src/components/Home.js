@@ -24,6 +24,7 @@ export default function Home() {
 
     useEffect(() => {
         onLoad()
+        // eslint-disable-next-line
     }, [])
 
     function onLoad() {

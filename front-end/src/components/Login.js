@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { useHistory } from 'react-router-dom';
-import jwt from 'jsonwebtoken';
 
 import './Login.css'
 
@@ -26,7 +25,7 @@ export default function Login() {
                 localStorage.setItem('TOKEN', res.data.accessToken)
                 history.push("/home")
             })
-            .catch(error => {
+            .catch(() => {
                 setWarning("Mot de passe incorrect ou Utilisateur inconnu")
             })
     }

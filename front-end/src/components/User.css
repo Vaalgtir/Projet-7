@@ -1,12 +1,32 @@
-.wrapperUser {
-    padding: 2rem 5rem;
-    border: solid black 1px;
+@media screen and (min-width:1200px) {
+    .wrapperUser {
+        padding: 2rem 5rem;
+        border: solid black 1px;
+    }
+    .wrapperButton {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .wrapperButton div {
+        text-align: center;
+    }
 }
-.wrapperButton {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-.wrapperButton div {
-    text-align: center;
+@media screen and (max-width:1200px) {
+    .wrapperUser {
+        padding: 2rem 5rem;
+        border: solid black 1px;
+    }
+    .wrapperButton {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 1rem 0;
+    }
+    .wrapperButton button {
+        margin: 0.5rem 0;
+    }
+    .wrapperButton div {
+        text-align: center;
+    }
 }

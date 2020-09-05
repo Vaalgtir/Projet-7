@@ -25,22 +25,22 @@ export default function CreateUser() {
     const isAuth = tokenDecoded.isAuthentified;
 
     useEffect(() => {
+        function confirmForm() {
+            if (password === "" || passwordVerif === "" || pseudo === "") {
+                setFeedbackForm(false)
+            } else {
+                if (password !== passwordVerif) {
+                    setFeedbackPwd("Mot de passe erroné")
+                    setFeedbackForm(false)
+                } else {
+                    setFeedbackForm(true)
+                    setFeedbackPwd("")
+                }
+            }
+        }
         confirmForm()
     }, [pseudo, password, passwordVerif])
 
-    function confirmForm() {
-        if (password === "" || passwordVerif === "" || pseudo === "") {
-            setFeedbackForm(false)
-        } else {
-            if (password !== passwordVerif) {
-                setFeedbackPwd("Mot de passe erroné")
-                setFeedbackForm(false)
-            } else {
-                setFeedbackForm(true)
-                setFeedbackPwd("")
-            }
-        }
-    }
     function handleSubmit(event) {
         event.preventDefault()
         

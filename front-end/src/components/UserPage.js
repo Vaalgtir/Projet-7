@@ -23,6 +23,7 @@ export default function UserPage(props) {
 
     useEffect(() => {
         onLoad()
+        // eslint-disable-next-line
     }, [])
 
     function onLoad() {
