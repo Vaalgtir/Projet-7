@@ -8,6 +8,10 @@ html, body, #root, .wrapperPage  {
     text-align: center;
     margin: 5% 30%;
 }
+.wrapperPage form label{
+    display: flex;
+    flex-direction: column;
+}
 .wrapperPage form input{
     margin: 0.5rem;
     padding: 0.3rem;

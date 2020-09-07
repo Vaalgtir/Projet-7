@@ -70,47 +70,59 @@ export default function CreateUser() {
                 <form
                     onSubmit={handleSubmit}
                 >
-                    <input
-                        type="text"
-                        placeholder='Pseudo (utilisé pour la connection)'
-                        value={pseudo}
-                        onChange={event => setPseudo(event.target.value)}
-                    />
-                    <input
-                        type="password"
-                        placeholder='Mot de passe'
-                        value={password}
-                        onChange={event => setPassword(event.target.value)}
-                    />
+                    <label>Pseudo (utilisé pour la connection) : 
+                        <input
+                            type="text"
+                            placeholder='Pseudo'
+                            value={pseudo}
+                            onChange={event => setPseudo(event.target.value)}
+                        />
+                    </label>
+                    <label>Mot de passe : 
+                        <input
+                            type="password"
+                            placeholder='Mot de passe'
+                            value={password}
+                            onChange={event => setPassword(event.target.value)}
+                        />
+                    </label>
                     {validPwd} 
-                    <input
-                        type="password"
-                        placeholder='Confirmer le mot de passe'
-                        value={passwordVerif}
-                        onChange={event => setPasswordVerif(event.target.value)}
-                    />
-                    <select value={privilege} onChange={event => setPrivilege(event.target.value)}>
-                      <option value="0">Membre</option>
-                      <option value="1">Admin</option>
-                    </select>
-                    <input
-                        type="text"
-                        placeholder='E-mail'
-                        value={email}
-                        onChange={event => setEmail(event.target.value)}
-                    />
-                    <textarea
-                        row='5'
-                        placeholder='Biographie'
-                        value={bio}
-                        onChange={event => setBio(event.target.value)}
-                    />
-                    <input
-                        type="submit"
-                        value="Valider"
-                        className="submitButton"
-                        disabled={!validForm}
-                    />
+                    <label>Confirmer le mot de passe : 
+                        <input
+                            type="password"
+                            placeholder='Confirmer le mot de passe'
+                            value={passwordVerif}
+                            onChange={event => setPasswordVerif(event.target.value)}
+                        />
+                    </label>
+                    <label> Choississez le type de Profil : 
+                        <select value={privilege} onChange={event => setPrivilege(event.target.value)}>
+                        <option value="0">Membre</option>
+                        <option value="1">Admin</option>
+                        </select>
+                    </label>
+                    <label>E-mail : 
+                        <input
+                            type="text"
+                            placeholder='E-mail'
+                            value={email}
+                            onChange={event => setEmail(event.target.value)}
+                        />
+                    </label>
+                    <label>Biographie : 
+                        <textarea
+                            row='5'
+                            placeholder='Biographie'
+                            value={bio}
+                            onChange={event => setBio(event.target.value)}
+                        />
+                    </label>
+                        <input
+                            type="submit"
+                            value="Valider"
+                            className="submitButton"
+                            disabled={!validForm}
+                        />
                 </form>
             </div>
         )
