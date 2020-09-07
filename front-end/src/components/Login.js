@@ -31,7 +31,7 @@ export default function Login() {
     }
 
     return (
-        <div className="Login">
+        <main className="Login">
             <img src={logo} alt="Logo" className="logo" />
 
             <form
@@ -41,28 +41,30 @@ export default function Login() {
                 <span>Connectez Vous</span>
                 <div className="wrapperInput">
                     <span className="warningMessage">{warningFeedback}</span>
-                    <label htmlFor="identifiant">Identifiant :</label>
-                    <input
-                        type="text"
-                        name="identifiant"
-                        value={userId}
-                        onChange={event => setUserId(event.target.value)}
-                    />
+                    <label htmlFor="identifiant">Identifiant :
+                        <input
+                            type="text"
+                            name="identifiant"
+                            value={userId}
+                            onChange={event => setUserId(event.target.value)}
+                        />
+                    </label>
                 </div>
                 <div className="wrapperInput">
-                    <label htmlFor="mdp">Mot de passe :</label>
-                    <input
-                        type="password"
-                        name="mdp"
-                        value={pwd}
-                        onChange={event => setPwd(event.target.value)}
-                    />
+                    <label htmlFor="mdp">Mot de passe :
+                        <input
+                            type="password"
+                            name="mdp"
+                            value={pwd}
+                            onChange={event => setPwd(event.target.value)}
+                        />
+                    </label>
                 </div>
                 <input
                     type="submit"
                     value="Valider"
                 />
             </form>
-        </div>
+        </main>
     )
 }

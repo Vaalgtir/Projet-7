@@ -69,22 +69,26 @@ export default function Home() {
 
     if (isAuth) {
         return (
-            <main>
+            <main className="Home">
                 <form
                     onSubmit={handleSubmit}
                 >
-                    <textarea
-                        col="10"
-                        placeholder="Titre"
-                        value={titre}
-                        onChange={event => setTitle(event.target.value)}
-                    ></textarea>
-                    <textarea
-                        rows="5"
-                        placeholder="Que voulez vous partager ?"
-                        value={content}
-                        onChange={event => setContent(event.target.value)}
-                    ></textarea>
+                    <label>Titre: 
+                        <textarea
+                            col="10"
+                            placeholder="Titre"
+                            value={titre}
+                            onChange={event => setTitle(event.target.value)}
+                        ></textarea>
+                    </label>
+                    <label>Votre article
+                        <textarea
+                            rows="5"
+                            placeholder="Que voulez vous partager ?"
+                            value={content}
+                            onChange={event => setContent(event.target.value)}
+                        ></textarea>
+                    </label>
                     <div>
                         <input type="submit" value="Partager" />
                     </div>

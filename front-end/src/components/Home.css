@@ -1,39 +1,39 @@
 @media screen and (min-width:1200px) {
-  main {
+  .Home {
     margin: 0 25%;
     padding: 2vh 2rem;
     background-color: #FBE9E7;
   }
-  main form {
+  .Home form label{
     font-size: 1.2rem;
-    display: grid;
-    grid-template: 1fr;
+    display: flex;
+    flex-direction: column;
   }
-  main form textarea {
+  .Home form textarea {
     resize: none;
     border-radius: 0.5rem;
   }
-  main form div {
+  .Home form div {
     text-align: right;
     margin-top: 1vh;
   }
 }
 @media screen and (max-width:1200px) {
-  main {
+  .Home {
     margin: 0 5%;
     padding: 2vh 1rem;
     background-color: #FBE9E7;
   }
-  main form {
+  .Home form label{
     font-size: 1.2rem;
-    display: grid;
-    grid-template: 1fr;
+    display: flex;
+    flex-direction: column;
   }
-  main form textarea {
+  .Home form textarea {
     resize: none;
     border-radius: 0.5rem;
   }
-  main form div {
+  .Home form div {
     text-align: right;
     margin-top: 1vh;
   }

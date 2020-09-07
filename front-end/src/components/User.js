@@ -29,7 +29,7 @@ export default function User({ selectedUserId, username, role, email, bio, error
     }
     
     return (
-        <div className="wrapperTicket" >
+        <section className="wrapperTicket" >
             {modifying ? (
                 [<div className="wrapperUser" key="1">
                     <div className="pseudo" >{username} ({role === 0 ? 'Member' : 'Admin'})</div>
@@ -113,6 +113,6 @@ export default function User({ selectedUserId, username, role, email, bio, error
 
                 </div>)]
             )}
-        </div>
+        </section>
     )
 }

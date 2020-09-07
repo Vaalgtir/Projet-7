@@ -76,7 +76,7 @@ export default function UserPage(props) {
     
     if (isAuth) {
         return (
-            <div className="wrapperPage" >
+            <main className="wrapperPage" >
                 {users.length > 0 ?
                     (users.map((user, index) => (
                         <User 
@@ -98,7 +98,7 @@ export default function UserPage(props) {
                         onClick={() => history.push('/creationUser')}
                     >Créer un nouvel Utilisateur</button>
                 ) : null}
-            </div>
+            </main>
         )
     } else {
         history.push("/")

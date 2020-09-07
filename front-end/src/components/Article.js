@@ -24,7 +24,7 @@ export default function Article ( {articleId, role, userId, username, date, onCl
         history.push(`/user/${userId}`)
     }
     return (
-        <div className="article" >
+        <section className="article" >
             <span>
                 <span onClick={handleProfil.bind(this, userId)} className="profilLink" >
                     {username}
@@ -32,6 +32,6 @@ export default function Article ( {articleId, role, userId, username, date, onCl
             </span>
             <div className="titre"> {titre} </div>
             <div>{content}</div>
-        </div>
+        </section>
     )
 }
