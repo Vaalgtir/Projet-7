@@ -6,7 +6,6 @@ const Error = require('../security_public/error');
 
 exports.createArticle = (req, res, next) => {
     const message = req.body
-    console.group(req)
     conn.query('INSERT INTO articles SET ?', message, function (
       error,
       results,
